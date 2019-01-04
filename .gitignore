@@ -1,0 +1,5 @@
+# 依赖
+node_modules
+
+# 构建完的文件
+dist
