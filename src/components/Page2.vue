@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: 'page2',
+  name: 'Page2',
   created () {
     console.log('page2 created')
   }

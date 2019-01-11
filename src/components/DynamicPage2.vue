@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-  name: 'page2',
+  name: 'DynamicPage2',
   created () {
     console.log('page2 created')
   }

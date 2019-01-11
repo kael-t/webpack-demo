@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const setting = require('./webpack.setting');
 const happypackPlugin = require('./happypack.config');
@@ -126,6 +127,9 @@ module.exports = {
 
 	// 插件
 	plugins: [
+		new webpack.ProvidePlugin({
+			_: "lodash"
+		}),
 		new CleanWebpackPlugin(['dist'], {
       root: path.resolve(__dirname, '..'),
       dry: false // 启用删除文件
