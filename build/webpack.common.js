@@ -130,9 +130,13 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			_: "lodash"
 		}),
-		new CleanWebpackPlugin(['dist'], {
-      root: path.resolve(__dirname, '..'),
-      dry: false // 启用删除文件
+		// new CleanWebpackPlugin(['dist'], {
+    //   root: path.resolve(__dirname, '..'),
+    //   dry: false // 启用删除文件
+		// }),
+		new webpack.DllReferencePlugin({
+			context: '/',
+			manifest: resolve('dist/dll/vendors.manifest.json')
 		}),
 		// webpack4以上必须显式引入vueLoaderPlugin
 		new VueLoaderPlugin(),
